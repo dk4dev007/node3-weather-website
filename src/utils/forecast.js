@@ -15,7 +15,8 @@ const forecast = (latitude,longitude,callback) => {
         }
         else
         {
-            callback(undefined, body.current.weather_descriptions[0] + ' It is currently ' + body.current.temperature + ' Celsius out. There is a ' + body.current.precip + '% chance of rain.')
+            console.log(body) 
+            callback(undefined, body.current.weather_descriptions[0] + ' It is currently ' + body.current.temperature + ' Celsius out there feelslike ' + body.current.feelslike + ' . And wind speed is ' + body.current.wind_speed + ' . There is a ' + body.current.precip + '% chance of rain.')
         }
     })
 }
